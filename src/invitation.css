@@ -27,3 +27,33 @@
 .supplied-venue{padding:0 0 30px}.venue-art-panel{position:relative;min-height:620px;aspect-ratio:1008/1792;background:#fff1e3}.venue-art{width:100%;height:100%;position:absolute;inset:0;object-fit:fill}.venue-art-caption{position:absolute;z-index:2;top:11%;left:26px;right:26px}.venue-art-caption h2{font-size:40px}.venue-art-caption p{font-size:19px;max-width:320px;margin:14px auto}.venue-art-caption .directions-button{margin:24px auto 0;background:#fff8ed80}.supplied-venue>.map-frame{margin:18px 24px 0}.closing-photo{object-position:center bottom;aspect-ratio:1.1;border-radius:4px}
 .seal>span{font-size:40px;padding-right:7px}.seal-amp{font-size:23px}.hero-heading{font-size:32px}.blessings .botanical-left,.closing .botanical-left{left:-115px}.blessings .botanical-right,.closing .botanical-right{right:-115px}
 @media(max-width:320px){.hero-heading{font-size:26px}.hero-date{font-size:19px}.couple-names{font-size:58px}.family-scene .family-names{font-size:53px}.schedule h2{font-size:27px}.scene{padding-left:20px;padding-right:20px}.supplied-venue{padding-left:0;padding-right:0}}
+
+/* Keep the garden's 2:3 composition in both the invite and the builder iframe. */
+.hero{height:auto;aspect-ratio:2/3;container-type:inline-size}
+.hero-art{object-fit:contain}
+.hero-content{position:absolute;inset:0;padding:0}
+.hero-heading{position:absolute;top:25%;left:13%;right:13%;margin:0;font-family:var(--serif);font-weight:600;font-size:clamp(19px,6.3cqw,28px);line-height:1.2;color:#79551c;text-shadow:0 1px 5px #fff5e8}
+.hero-date{position:absolute;top:32%;left:12%;right:12%;margin:0;font-size:clamp(16px,4.8cqw,22px);line-height:1.35;color:#88601e}
+.couple-names{position:absolute;top:38%;left:8%;right:8%;margin:0;font-size:clamp(42px,14cqw,63px);line-height:1.05;text-shadow:0 1px 6px #fff3dc,0 0 12px #fff3dc}
+.couple-names .ampersand{font-size:.42em;margin:2px 0}
+.scroll-cue{position:absolute;top:77%;left:0;right:0;margin:0;gap:8px}
+.scroll-cue .script{font-size:clamp(22px,6.2cqw,28px);text-shadow:0 1px 4px #fff5e8}
+.hero-flowers{width:40%}
+
+/* Client illustrations replace the event symbols; white paper blends into parchment. */
+.event-illustration{position:relative;width:150px;margin:4px auto 18px;mix-blend-mode:multiply}
+.event-illustration img{width:100%;height:auto}
+.event-illustration--haldi{width:210px;height:132px;overflow:hidden}
+.event-illustration--haldi img{position:absolute;top:50%;left:0;transform:translateY(-50%)}
+.event-illustration--anand-karaj{width:155px}
+.event-illustration--lunch{width:160px}
+.event-scene .scene-inner{mix-blend-mode:multiply}
+
+/* The Gurudwara artwork already contains the Location heading. */
+.venue-art-panel{min-height:0;aspect-ratio:9/16}
+.venue-art{object-fit:contain}
+.gurudwara-venue .venue-art-caption{top:25%;left:14%;right:14%}
+.gurudwara-venue .venue-art-caption h3{margin:0;font-size:24px;line-height:1.2}
+.gurudwara-venue .venue-art-caption p{font-size:18px;line-height:1.25;margin:8px auto}
+.gurudwara-venue .directions-button{font-size:16px;line-height:1.25;padding:10px 6px;margin:14px auto 0}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}

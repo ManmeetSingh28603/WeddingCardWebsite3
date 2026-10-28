@@ -3,10 +3,11 @@ export const assets = {
   garden: 'assets/garden.webp',
   envelope: 'assets/envelope.webp',
   floral: 'assets/floral.webp',
-  audio: null, // e.g. 'assets/wedding-song.mp3' — use the client's exact supplied recording.
+  audio: 'assets/audio/wedding-reel.m4a', // Original audio from the client-selected Instagram reel.
   openingVideo: null, // Optional authorized opening film; original CSS sequence is the default.
   heroVideo: null, // Optional authorized moving garden footage.
   venuePhoto: 'assets/venue.jpg', // Client-supplied venue artwork; preserved without retouching.
+  gurudwaraPhoto: 'assets/ashiyana-gurudwara.png',
   gallery: [] // [{src:'assets/couple-01.jpg', alt:'Harshit and Pritanshi ...'}]
 };
 
@@ -24,10 +25,10 @@ export const venues = {
 };
 
 export const events = [
-  { id: 'haldi', name: 'Haldi', title: 'Hues of Love', date: '2026-12-03T12:30:00+05:30', venue: 'jb', motif: 'sun' },
-  { id: 'cocktail', name: 'Cocktail', title: 'The Saga of Love', soloTitle: 'A Saga of Love', date: '2026-12-03T20:00:00+05:30', venue: 'jb', motif: 'glasses' },
-  { id: 'anand-karaj', name: 'Anand Karaj', title: 'The Blissful Union', date: '2026-12-04T12:30:00+05:30', venue: 'gurudwara', motif: 'arch' },
-  { id: 'lunch', name: 'Jaimal and Lunch', title: 'Together in Celebration', date: '2026-12-04T14:30:00+05:30', venue: 'jb', motif: 'flower' }
+  { id: 'haldi', name: 'Haldi', title: 'Hues of Love', date: '2026-12-03T12:30:00+05:30', venue: 'jb', image: 'assets/event-haldi.jpg', imageAlt: 'Turmeric, coconut, flowers and a diya for Haldi' },
+  { id: 'cocktail', name: 'Cocktail', title: 'The Saga of Love', soloTitle: 'A Saga of Love', date: '2026-12-03T20:00:00+05:30', venue: 'jb', image: 'assets/event-cocktail.jpg', imageAlt: 'Two wine glasses toasting the cocktail celebration' },
+  { id: 'anand-karaj', name: 'Anand Karaj', title: 'The Blissful Union', date: '2026-12-04T12:30:00+05:30', venue: 'gurudwara', image: 'assets/event-anand-karaj.png', imageAlt: 'A Sikh bride and groom seated for Anand Karaj' },
+  { id: 'lunch', name: 'Jaimal and Lunch', title: 'Together in Celebration', date: '2026-12-04T14:30:00+05:30', venue: 'jb', image: 'assets/event-jaimal.jpg', imageAlt: 'A bride and groom in wedding attire for Jaimal' }
 ];
 
 export const sides = {

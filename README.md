@@ -30,8 +30,10 @@ An absent `e` parameter means all functions. An explicit empty or wholly invalid
 
 Edit **`src/config.js`** for family names, blessings, dates, venues, titles, optional sections and media. Dates use ISO timestamps with `+05:30`; display formatting uses Asia/Kolkata regardless of the visitor’s timezone. Event groups and date ranges derive from selected events.
 
-- `assets/venue.jpg` is the supplied `grok-image-14cafea8-eecd-46cd-aaf9-ccc1698b08b5.jpg.jpeg`, copied without retouching. Its full composition is used for the location panel and a bottom-aligned crop for the closing scene.
-- **Audio is still pending.** Add the client’s exact recording to `assets/`, then set `assets.audio` to its relative path. A single audio element starts on the opening gesture, loops, and stays alive while scrolling. The play/pause control appears only when a file is configured. Failed playback produces a retry message.
+- `assets/venue.jpg` is the supplied JB Innovations artwork, used on its location panel. The closing family page has no venue photograph.
+- `assets/ashiyana-gurudwara.png` is the supplied Ashiyana Gurudwara location artwork. Its printed “Location” title is preserved, with the address and directions button beneath it.
+- The four supplied `assets/event-*` illustrations are mapped to the matching events in `src/config.js`. The original files are preserved; CSS sizes them and blends their light backgrounds into the parchment.
+- **Background music:** `assets/audio/wedding-reel.m4a` is the original audio track extracted from the client-selected Instagram reel `Dc-jjCstEFO`. It starts when a guest opens the invitation, loops continuously while they scroll, and can be paused/resumed with the music button. Both builder previews, including “Replay opening,” remain silent and do not load the track. To replace it, change `assets.audio` in `src/config.js`. Failed playback produces a retry message.
 - Original garden, envelope and floral PNG source artwork is retained. Optimized `.webp` copies are used by the website, totaling about 1.2 MB. Prompts and provenance are in `docs/ASSET-PROMPTS.md`.
 - Fonts are self-hosted in `assets/fonts/` with their SIL Open Font Licenses. No Google Fonts connection is needed by the published pages.
 - Add real photos to `assets.gallery` as `{src, alt}` entries to enable the optional gallery and keyboard-closeable lightbox. No substitute couple photos are supplied.
