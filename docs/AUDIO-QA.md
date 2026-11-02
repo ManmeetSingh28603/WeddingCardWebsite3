@@ -1,4 +1,6 @@
-# Soundtrack checks — 28 October 2026
+# Previous soundtrack checks — 28 October 2026
+
+This QA record applies to the Instagram reel audio previously used by the site. That file has been replaced with the client-supplied `assets/audio/client-soundtrack.mpeg` (2 November 2026); the playback flow remains the same, but the prior checks below were run against the superseded file.
 
 Source: client-selected Instagram reel https://www.instagram.com/reel/Dc-jjCstEFO/.
 Saved its original audio-only rendition as `assets/audio/wedding-reel.m4a` (164,452 bytes; browser duration 22.382585 seconds). No transcoding or audio edits.

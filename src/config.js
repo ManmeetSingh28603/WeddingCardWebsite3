@@ -3,7 +3,8 @@ export const assets = {
   garden: 'assets/garden.webp',
   envelope: 'assets/envelope.webp',
   floral: 'assets/floral.webp',
-  audio: 'assets/audio/wedding-reel.m4a', // Original audio from the client-selected Instagram reel.
+  audio: 'assets/audio/client-soundtrack.mpeg', // Audio supplied by the client on 2 November 2026.
+  sealLogo: 'assets/harshit-pritanshi-logo.png',
   openingVideo: null, // Optional authorized opening film; original CSS sequence is the default.
   heroVideo: null, // Optional authorized moving garden footage.
   venuePhoto: 'assets/venue.jpg', // Client-supplied venue artwork; preserved without retouching.
@@ -38,13 +39,13 @@ export const sides = {
     hosts: ['Smt. Tanisha & Shri Darshan Raisinghani'],
     together: 'Together with their family',
     request: 'Request the pleasure of your gracious presence at the wedding celebrations of their beloved son',
-    relations: ['Grandson of Late Smt. Sangeeta & Late Shri Ram Chand Jeswani', 'Son of Smt. Meghna & Shri Sanjay Jeswani'],
+    relations: ['Granddaughter of Late Smt. Sangeeta & Late Shri Ram Chand Jeswani', 'Daughter of Smt. Meghna & Shri Sanjay Jeswani'],
     closing: 'Awaiting your Presence,',
-    closingNames: ['Hunar & Sumit Dembra,', 'Harshita & Karamjeet Raisinghani,', 'Soni and Late Ashwani Samtani,', 'Raisinghani and Manwani Family']
+    closingNames: ['MRS. HUNAR & MR. SUMIT DEMBRA', 'MRS. HARSHITA & MR. KARAMJEET RAISINGHANI', 'MRS. SONI SAMTANI', 'MRS. MONICA & MR. RAMESH RAISINGHANI', 'MR. DEEPAK RAISINGHANI', 'MRS. RAKHI AND MR. ANOOP RAISINGHANI', 'MR. JAYANT SAMTANI', 'AND MANWANI FAMILY']
   },
   pritanshi: {
     label: 'Bride', first: 'Pritanshi', second: 'Harshit', family: 'Jeswani Family',
-    blessings: ['Late Smt. Sangeeta & Late Shri Ram Chand Jeswani'],
+    blessings: ['Late Smt. Sangeeta & Late Shri Ram Chand Jeswani', 'Late Smt. Sakhi Devi & Late Shri Manik Lal Tejwani'],
     hosts: ['Smt. Meghna & Shri Sanjay Jeswani along with', 'Smt. Rhythm & Shri Yogansh Jeswani'],
     together: '',
     request: 'Request the pleasure of your gracious presence at the wedding celebrations of their beloved',

@@ -1,6 +1,6 @@
 @import url('../assets/fonts/fonts.css');
 
-:root{--paper:#f9f0e0;--ink:#806b58;--gold:#ac7d24;--wine:#5a0f1b;--script:'Great Vibes',cursive;--serif:'Cormorant Garamond',Georgia,serif;color-scheme:light}
+:root{--paper:#f9f0e0;--ink:#594638;--gold:#ac7d24;--wine:#5a0f1b;--script:'Great Vibes',cursive;--serif:'Cormorant Garamond',Georgia,serif;color-scheme:light}
 *{box-sizing:border-box}html{scroll-behavior:smooth;background:var(--paper)}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:21px;-webkit-font-smoothing:antialiased}body.is-locked{overflow:hidden}button,a,input{touch-action:manipulation}button{font:inherit}button,a{-webkit-tap-highlight-color:transparent}button{cursor:pointer}a{color:inherit}img{max-width:100%;display:block}button:focus-visible,a:focus-visible{outline:2px solid var(--wine);outline-offset:6px}button[hidden],[hidden]{display:none!important}.script{font-family:var(--script);font-weight:400;color:var(--gold)}.eyebrow{font-size:16px;letter-spacing:.06em;line-height:1.7}.ornament{width:130px;height:auto;margin:24px auto;opacity:.65}.skip-link{position:fixed;top:-100px;left:12px;padding:12px;background:var(--wine);color:white;z-index:110}.skip-link:focus{top:12px}.no-script,.empty-invitation{max-width:450px;margin:80px auto;padding:30px;text-align:center}.empty-invitation h1{font-size:50px}.invitation{width:min(100%,450px);margin:auto;overflow:clip;outline:none}.scene{position:relative;text-align:center;padding:60px 28px;isolation:isolate}.scene-inner{position:relative;z-index:2}.scene h2{font-size:39px;line-height:1.25;margin:12px 0 24px}.scene h3{font-size:24px;font-weight:500;margin:14px 0}.scene p{line-height:1.4;margin:18px 0}.paper{background-color:#f3e8d3;background-image:url('../assets/paper.svg');margin:14px 0}.paper:before,.paper:after{content:'';position:absolute;left:0;width:100%;height:18px;z-index:3;background:var(--paper);clip-path:polygon(0 0,100% 0,100% 55%,97% 64%,94% 29%,89% 78%,84% 50%,80% 85%,74% 45%,69% 65%,64% 30%,59% 75%,55% 47%,49% 88%,43% 48%,37% 63%,32% 25%,26% 70%,20% 48%,14% 87%,9% 40%,5% 58%,0 36%)}.paper:before{top:-1px}.paper:after{bottom:-1px;transform:rotate(180deg)}
 
 /* One persistent opening overlay. The 4.8s reference film is recreated with original paper layers. */
@@ -39,6 +39,17 @@
 .scroll-cue{position:absolute;top:77%;left:0;right:0;margin:0;gap:8px}
 .scroll-cue .script{font-size:clamp(22px,6.2cqw,28px);text-shadow:0 1px 4px #fff5e8}
 .hero-flowers{width:40%}
+
+/* Client's transparent monogram replaces the wax seal. Keep the opening on one smooth GPU-backed timeline. */
+.seal-logo{position:absolute;z-index:8;width:clamp(132px,38vw,190px);height:auto;left:50%;top:47%;transform:translate(-50%,-50%);filter:sepia(.45) saturate(.75) brightness(.72) drop-shadow(0 2px 3px #5f472b38);backface-visibility:hidden;will-change:transform,opacity}
+.envelope-piece,.letter-card{will-change:transform,opacity;transform:translateZ(0);backface-visibility:hidden}
+.is-opening .seal-logo{animation:logo-open 3.4s ease-in-out both}
+.is-opening .envelope-top{animation:flap-open 3.4s .25s ease-in-out both}
+.is-opening .envelope-left{animation:left-open 2.6s 1.3s ease-in-out both}
+.is-opening .envelope-right{animation:right-open 2.6s 1.3s ease-in-out both}
+.is-opening .envelope-bottom{animation:bottom-open 2.6s 1.3s ease-in-out both}
+.is-opening .letter-card{animation:letter-rise 3.2s 1s ease-in-out both}
+@keyframes logo-open{0%{filter:drop-shadow(0 2px 3px #5f472b38)}30%{filter:sepia(.45) saturate(.75) brightness(.72) drop-shadow(0 0 9px #ffcf80);transform:translate(-50%,-50%) scale(1.03)}65%{opacity:1;transform:translate(-50%,-85%) scale(1.07)}100%{opacity:0;transform:translate(-50%,-180%) scale(1.12)}}
 
 /* Client illustrations replace the event symbols; white paper blends into parchment. */
 .event-illustration{position:relative;width:150px;margin:4px auto 18px;mix-blend-mode:multiply}
