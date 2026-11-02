@@ -70,3 +70,8 @@
 .gurudwara-venue .venue-art-caption p{font-size:18px;line-height:1.25;margin:8px auto}
 .gurudwara-venue .directions-button{font-size:16px;line-height:1.25;padding:10px 6px;margin:14px auto 0}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* Keep the previous envelope motion and set the supplied monogram as a gold wax-seal imprint. */
+.seal-mark{position:relative;width:76px;height:58px;overflow:hidden;z-index:1;font-size:0;transform:none;text-shadow:none}
+.seal-mark img{position:absolute;width:166px;max-width:none;height:auto;left:-35px;top:-40px;filter:brightness(0) saturate(100%) invert(78%) sepia(31%) saturate(748%) hue-rotate(358deg) brightness(91%) contrast(88%)}
+@media(max-width:380px){.seal-mark{width:68px;height:52px}.seal-mark img{width:156px;left:-33px;top:-37px}}
