@@ -41,14 +41,16 @@
 .hero-flowers{width:40%}
 
 /* Client's transparent monogram replaces the wax seal. Keep the opening on one smooth GPU-backed timeline. */
+.opening{transition:opacity 1.2s ease,background-color 1s ease 2s}
+.is-opening .opening{background-color:transparent}
+.is-opening .hero-enter{animation:hero-rise 1.8s 2.5s both}
 .seal-logo{position:absolute;z-index:8;width:clamp(132px,38vw,190px);height:auto;left:50%;top:47%;transform:translate(-50%,-50%);filter:sepia(.45) saturate(.75) brightness(.72) drop-shadow(0 2px 3px #5f472b38);backface-visibility:hidden;will-change:transform,opacity}
-.envelope-piece,.letter-card{will-change:transform,opacity;transform:translateZ(0);backface-visibility:hidden}
+.envelope-piece{will-change:transform,opacity;transform:translateZ(0);backface-visibility:hidden}
 .is-opening .seal-logo{animation:logo-open 3.4s ease-in-out both}
 .is-opening .envelope-top{animation:flap-open 3.4s .25s ease-in-out both}
 .is-opening .envelope-left{animation:left-open 2.6s 1.3s ease-in-out both}
 .is-opening .envelope-right{animation:right-open 2.6s 1.3s ease-in-out both}
 .is-opening .envelope-bottom{animation:bottom-open 2.6s 1.3s ease-in-out both}
-.is-opening .letter-card{animation:letter-rise 3.2s 1s ease-in-out both}
 @keyframes logo-open{0%{filter:drop-shadow(0 2px 3px #5f472b38)}30%{filter:sepia(.45) saturate(.75) brightness(.72) drop-shadow(0 0 9px #ffcf80);transform:translate(-50%,-50%) scale(1.03)}65%{opacity:1;transform:translate(-50%,-85%) scale(1.07)}100%{opacity:0;transform:translate(-50%,-180%) scale(1.12)}}
 
 /* Client illustrations replace the event symbols; white paper blends into parchment. */
