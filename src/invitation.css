@@ -75,3 +75,38 @@
 .seal-stamp{position:absolute;z-index:8;width:min(38vw,150px);height:min(47vw,186px);left:50%;top:47%;transform:translate(-50%,-50%);object-fit:cover;object-position:center 36%;mix-blend-mode:multiply;will-change:transform,opacity}
 .is-opening .seal-stamp{animation:seal-open 3.6s ease-in-out both}
 @media(max-width:380px){.seal-stamp{width:min(39vw,138px);height:min(48vw,170px)}}
+
+/* ===== Envelope opening v2 — red & gold wax seal, one smooth transform/opacity-only timeline =====
+   0.00s seal presses · 0.25s seal lifts away · 0.45s top flap folds up (front + plain inside face)
+   1.30s interior clears & side/bottom panels glide apart · 1.95s names rise · 2.6s overlay fades */
+.opening{background-color:var(--paper);transition:opacity .7s ease,background-color .5s ease}
+.is-opening .opening{background-color:transparent;transition:opacity .7s ease,background-color .6s ease 1.3s}
+.envelope-stage{transform-style:flat} /* keeps z-index (seal above flap) while the flap moves in 3D */
+.envelope-piece{will-change:transform,opacity;transform:translate3d(0,0,0);backface-visibility:hidden;-webkit-backface-visibility:hidden}
+/* Slight overlaps hide hairline seams between the clipped panels. */
+.envelope-left{clip-path:polygon(0 0,50.6% 45.4%,50.6% 52.6%,0 100%)}
+.envelope-right{clip-path:polygon(100% 0,49.4% 45.4%,49.4% 52.6%,100% 100%)}
+.envelope-bottom{clip-path:polygon(0 100%,50% 50.4%,100% 100%)}
+.envelope-top,.envelope-top-back{transform-origin:50% 0;clip-path:polygon(0 0,100% 0,50% 45.6%)}
+.envelope-top{filter:drop-shadow(0 3px 4px #6b4d2a33)}
+.envelope-top-back{z-index:7;background:linear-gradient(0deg,#e6d6bb,#f4ecdd 70%);box-shadow:inset 0 0 40px #b08a5a40;transform:perspective(2600px) rotateX(0) rotateY(180deg);opacity:0}
+/* Transparent red-wax seal with gold emboss (assets/seal-red.webp). */
+.seal-stamp{z-index:8;width:clamp(118px,36vw,158px);height:auto;aspect-ratio:560/633;left:50%;top:47%;object-fit:contain;object-position:center;mix-blend-mode:normal;transform:translate3d(-50%,-50%,0);filter:drop-shadow(0 6px 7px #3a050c55);will-change:transform,opacity;pointer-events:none;animation:seal-idle 3.2s 1.2s ease-in-out infinite}
+@media(max-width:380px){.seal-stamp{width:clamp(112px,35vw,140px);height:auto}}
+.is-opening .tap-label{opacity:0;animation:none;transition:opacity .3s ease}
+.is-opening .seal-stamp{animation:seal-lift .95s cubic-bezier(.45,0,.2,1) both}
+.is-opening .envelope-top{animation:flap-swing 1.15s .45s cubic-bezier(.45,.05,.35,1) both}
+.is-opening .envelope-top-back{opacity:1;animation:flap-swing-back 1.15s .45s cubic-bezier(.45,.05,.35,1) both,base-clear .45s 1.3s ease-out forwards}
+.is-opening .envelope-base{background:linear-gradient(180deg,#d9c6a6 0%,#e8dbc4 22%,#f2e9d9 46%,#efe4d1 100%);box-shadow:inset 0 18px 30px -12px #8a6a4066;animation:base-clear .6s 1.35s ease-out both}
+.is-opening .envelope-left{animation:panel-left 1.25s 1.3s cubic-bezier(.65,0,.2,1) both}
+.is-opening .envelope-right{animation:panel-right 1.25s 1.3s cubic-bezier(.65,0,.2,1) both}
+.is-opening .envelope-bottom{animation:panel-down 1.25s 1.3s cubic-bezier(.65,0,.2,1) both}
+.is-opening .hero-enter{animation:hero-rise 1.6s 1.95s cubic-bezier(.19,1,.22,1) both}
+@keyframes seal-idle{0%,100%{transform:translate3d(-50%,-50%,0) scale(1)}50%{transform:translate3d(-50%,-50%,0) scale(1.025)}}
+@keyframes seal-lift{0%{transform:translate3d(-50%,-50%,0) scale(1);opacity:1}25%{transform:translate3d(-50%,-50%,0) scale(.94);opacity:1}60%{transform:translate3d(-50%,-62%,0) scale(1.06) rotate(-3deg);opacity:1}100%{transform:translate3d(-50%,-95%,0) scale(1.14) rotate(-6deg);opacity:0}}
+@keyframes flap-swing{from{transform:perspective(2600px) rotateX(0)}to{transform:perspective(2600px) rotateX(180deg)}}
+@keyframes flap-swing-back{from{transform:perspective(2600px) rotateX(0) rotateY(180deg)}to{transform:perspective(2600px) rotateX(180deg) rotateY(180deg)}}
+@keyframes base-clear{from{opacity:1}to{opacity:0}}
+@keyframes panel-left{0%{transform:translate3d(0,0,0);opacity:1}55%{opacity:1}100%{transform:translate3d(-104%,0,0);opacity:0}}
+@keyframes panel-right{0%{transform:translate3d(0,0,0);opacity:1}55%{opacity:1}100%{transform:translate3d(104%,0,0);opacity:0}}
+@keyframes panel-down{0%{transform:translate3d(0,0,0);opacity:1}55%{opacity:1}100%{transform:translate3d(0,104%,0);opacity:0}}

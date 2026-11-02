@@ -4,7 +4,7 @@ export const assets = {
   envelope: 'assets/envelope.webp',
   floral: 'assets/floral.webp',
   audio: 'assets/audio/client-soundtrack.mpeg', // Audio supplied by the client on 2 November 2026.
-  sealStamp: 'assets/seal-stamp.jpeg',
+  sealStamp: 'assets/seal-red.webp',
   openingVideo: null, // Optional authorized opening film; original CSS sequence is the default.
   heroVideo: null, // Optional authorized moving garden footage.
   venuePhoto: 'assets/venue.jpg', // Client-supplied venue artwork; preserved without retouching.
