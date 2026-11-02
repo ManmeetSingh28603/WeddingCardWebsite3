@@ -71,9 +71,7 @@
 .gurudwara-venue .directions-button{font-size:16px;line-height:1.25;padding:10px 6px;margin:14px auto 0}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 
-/* Keep the previous envelope motion and set the supplied monogram as a gold wax-seal imprint. */
-.seal .seal-mark{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;width:100%;color:#e7c35f;font-family:'Cormorant Garamond',Georgia,serif;transform:none;text-shadow:0 1px 0 #fff1a2,0 2px 1px #5e3810,1px 0 2px #f6dc82}
-.seal-initials{font:600 48px/.82 'Cormorant Garamond',Georgia,serif;letter-spacing:-.09em;padding-right:.09em}
-.seal-name{margin-top:6px;font:15px/.9 'Great Vibes',cursive;white-space:nowrap;color:#e7c35f}
-.seal-date{margin-top:5px;font:8px/1 'Cormorant Garamond',Georgia,serif;letter-spacing:.04em;white-space:nowrap}
-@media(max-width:380px){.seal-initials{font-size:44px}.seal-name{font-size:14px}.seal-date{font-size:7px}}
+/* The supplied wax-seal artwork is cropped to the stamp and blended into the envelope paper. */
+.seal-stamp{position:absolute;z-index:8;width:min(38vw,150px);height:min(47vw,186px);left:50%;top:47%;transform:translate(-50%,-50%);object-fit:cover;object-position:center 36%;mix-blend-mode:multiply;will-change:transform,opacity}
+.is-opening .seal-stamp{animation:seal-open 3.6s ease-in-out both}
+@media(max-width:380px){.seal-stamp{width:min(39vw,138px);height:min(48vw,170px)}}
