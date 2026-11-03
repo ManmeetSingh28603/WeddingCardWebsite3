@@ -41,7 +41,7 @@ export const sides = {
     request: 'Request the pleasure of your gracious presence at the wedding celebrations of their beloved son',
     relations: ['Granddaughter of Late Smt. Sangeeta & Late Shri Ram Chand Jeswani', 'Daughter of Smt. Meghna & Shri Sanjay Jeswani'],
     closing: 'Awaiting your Presence,',
-    closingNames: ['MRS. HUNAR & MR. SUMIT DEMBRA', 'MRS. HARSHITA & MR. KARAMJEET RAISINGHANI', 'MRS. SONI SAMTANI', 'MRS. MONICA & MR. RAMESH RAISINGHANI', 'MR. DEEPAK RAISINGHANI', 'MRS. RAKHI AND MR. ANOOP RAISINGHANI', 'MR. JAYANT SAMTANI', 'AND MANWANI FAMILY']
+    closingNames: ['Mrs. Hunar & Mr. Sumit Dembra', 'Mrs. Harshita & Mr. Karamjeet Raisinghani', 'Mrs. Soni Samtani', 'Mrs. Monica & Mr. Ramesh Raisinghani', 'Mr. Deepak Raisinghani', 'Mrs. Rakhi & Mr. Anoop Raisinghani', 'Mr. Jayant Samtani', 'And Manwani Family']
   },
   pritanshi: {
     label: 'Bride', first: 'Pritanshi', second: 'Harshit', family: 'Jeswani Family',
@@ -89,7 +89,7 @@ export function eventTitle(event, selected) {
 }
 const india = {timeZone:'Asia/Kolkata'};
 export const dateText = date => new Intl.DateTimeFormat('en-GB',{...india,weekday:'long',day:'numeric',month:'long',year:'numeric'}).format(new Date(date));
-export const shortDate = date => new Intl.DateTimeFormat('en-GB',{...india,day:'numeric',month:'short'}).format(new Date(date));
+export const shortDate = date => new Intl.DateTimeFormat('en-GB',{...india,day:'numeric',month:'short',year:'numeric'}).format(new Date(date));
 export const timeText = date => new Intl.DateTimeFormat('en-US',{...india,hour:'numeric',minute:'2-digit',hour12:true}).format(new Date(date));
 export function dateRange(selected) {
   if (!selected.length) return '';

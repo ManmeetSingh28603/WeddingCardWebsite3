@@ -110,3 +110,57 @@
 @keyframes panel-left{0%{transform:translate3d(0,0,0);opacity:1}55%{opacity:1}100%{transform:translate3d(-104%,0,0);opacity:0}}
 @keyframes panel-right{0%{transform:translate3d(0,0,0);opacity:1}55%{opacity:1}100%{transform:translate3d(104%,0,0);opacity:0}}
 @keyframes panel-down{0%{transform:translate3d(0,0,0);opacity:1}55%{opacity:1}100%{transform:translate3d(0,104%,0);opacity:0}}
+
+/* ===== Client revisions — 3 Nov 2026 =====
+   One readable type scale used everywhere: body text 24px, small labels 19px. Darker ink + gold. */
+:root{--ink:#3b2b1f;--gold:#8e6316;--text:24px;--label:19px}
+body{color:var(--ink)}
+
+/* Step 1–2: countdown date/time larger relative to the counter, full-strength colour */
+.countdown span{font-size:46px}
+.countdown small{font-size:var(--label);color:var(--ink)}
+.countdown-note{font-size:23px;opacity:1;color:var(--ink);margin-top:26px;letter-spacing:.02em}
+
+/* Step 3: schedule — bigger times, dates (now with year) and names */
+.timeline{max-width:400px}
+.timeline-row{min-height:124px}
+.timeline-time time{font-size:31px}
+.timeline small{font-size:var(--label);margin-top:6px;color:var(--ink)}
+.timeline-description h3{font-size:27px}
+
+/* Steps 4–5: one function per page, larger text, smaller artwork */
+.event-scene{min-height:640px;display:grid;align-items:center}
+.event-scene>.scene-inner>.eyebrow{font-size:21px;letter-spacing:.04em;margin:0 0 22px}
+.event-type{font-size:29px}
+.event-detail h2{font-size:46px;margin:6px 0 16px}
+.event-time{font-size:26px}
+.venue-inline h3{font-size:27px}
+.venue-inline p{font-size:22px;line-height:1.4}
+.text-link{font-size:var(--label)}
+.event-illustration{width:128px;margin:2px auto 14px}
+.event-illustration--haldi{width:170px;height:107px}
+.event-illustration--anand-karaj{width:132px}
+.event-illustration--lunch{width:132px}
+
+/* Step 6: same comfortable size for every block of names/text through the invitation */
+.eyebrow{font-size:var(--label)}
+.blessing-names{max-width:340px}
+.blessing-names p,.hosts p,.relations p,.request,.closing-message,.closing-names p{font-size:var(--text);line-height:1.45}
+.family-names small{font-size:22px}
+.venue-art-caption p{font-size:22px}
+.closing-date{font-size:var(--label)}
+
+/* Step 7: the garden artwork is cropped at its top edge in the source image —
+   give it breathing room and fade the cut edge into the page so the frame no longer looks sliced. */
+.hero{margin-top:18px}
+.hero-art{-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 7%);mask-image:linear-gradient(to bottom,transparent 0,#000 7%)}
+.scroll-cue{color:#6b4610}
+.scroll-cue .script{font-size:clamp(28px,8cqw,34px);-webkit-text-stroke:.7px #6b4610;color:#6b4610;text-shadow:0 0 6px #fff7e6,0 0 14px #fff7e6,0 1px 2px #fff7e6}
+.scroll-cue .down-chevron{border-width:0 2px 2px 0;border-style:solid;border-color:#6b4610}
+
+/* Step 8: "Tap to open" — above the seal, darker, readable size, on a soft backing */
+.tap-label{top:26.5%;flex-direction:column-reverse;gap:10px;padding:9px 20px;border-radius:30px;background:#fbf4e6e6;box-shadow:0 2px 10px #6b4d2a26;font:600 16px 'Cinzel',serif;letter-spacing:.16em;color:#5a3814;animation:tap-in 1s .5s both,tap-pulse 2.4s 1.5s infinite ease-in-out}
+.tap-label .chevron{transform:rotate(225deg);border-width:2px 0 0 2px;animation:tap-chevron 2.4s 1.5s infinite ease-in-out}
+@keyframes tap-pulse{0%,100%{opacity:.85}50%{opacity:1}}
+@keyframes tap-chevron{0%,100%{transform:rotate(225deg) translate(0,0)}50%{transform:rotate(225deg) translate(-3px,-3px)}}
+@media(max-width:380px){.tap-label{font-size:15px;letter-spacing:.12em}}
