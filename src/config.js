@@ -29,19 +29,19 @@ export const events = [
   { id: 'haldi', name: 'Haldi', title: 'Hues of Love', date: '2026-12-03T12:30:00+05:30', venue: 'jb', image: 'assets/event-haldi.jpg', imageAlt: 'Turmeric, coconut, flowers and a diya for Haldi' },
   { id: 'cocktail', name: 'Cocktail', title: 'The Saga of Love', soloTitle: 'A Saga of Love', date: '2026-12-03T20:00:00+05:30', venue: 'jb', image: 'assets/event-cocktail.jpg', imageAlt: 'Two wine glasses toasting the cocktail celebration' },
   { id: 'anand-karaj', name: 'Anand Karaj', title: 'The Blissful Union', date: '2026-12-04T12:30:00+05:30', venue: 'gurudwara', image: 'assets/event-anand-karaj.png', imageAlt: 'A Sikh bride and groom seated for Anand Karaj' },
-  { id: 'lunch', name: 'Jaimal and Lunch', title: 'Together in Celebration', date: '2026-12-04T14:30:00+05:30', venue: 'jb', image: 'assets/event-jaimal.jpg', imageAlt: 'A bride and groom in wedding attire for Jaimal' }
+  { id: 'lunch', name: 'Jaimala and Lunch', title: 'Together in Celebration', date: '2026-12-04T14:30:00+05:30', venue: 'jb', image: 'assets/event-jaimal.jpg', imageAlt: 'A bride and groom in wedding attire for Jaimala' }
 ];
 
 export const sides = {
   harshit: {
     label: 'Groom', first: 'Harshit', second: 'Pritanshi', family: 'Raisinghani & Manwani Family',
-    blessings: ['Late Smt. Bharti & Late Shri Harkishan Singh Raisinghani', 'Late Smt. Parvati & Late Shri Nanak Ram Manwani'],
-    hosts: ['Smt. Tanisha & Shri Darshan Raisinghani'],
-    together: 'Together with their family',
-    request: 'Request the pleasure of your gracious presence at the wedding celebrations of their beloved son',
-    relations: ['Granddaughter of Late Smt. Sangeeta & Late Shri Ram Chand Jeswani', 'Daughter of Smt. Meghna & Shri Sanjay Jeswani'],
+    blessings: ['Late Mrs. Bharti & Late Mr. Harkishan Singh Raisinghani', 'Late Mrs. Parvati & Late Mr. Nanak Ram Manwani'],
+    hosts: ['Mrs. Tanisha & Mr. Darshan Raisinghani', 'Along with', 'Mrs. Hunar & Mr. Sumit Dembra'],
+    together: '',
+    request: 'Request the pleasure of your gracious presence at the wedding celebrations of their beloved',
+    relations: ['Granddaughter of Late Mrs. Sangeeta & Late Mr. Ram Chand Jeswani', 'Daughter of Mrs. Meghna & Mr. Sanjay Jeswani'],
     closing: 'Awaiting your Presence,',
-    closingNames: ['Mrs. Hunar & Mr. Sumit Dembra', 'Mrs. Harshita & Mr. Karamjeet Raisinghani', 'Mrs. Soni Samtani', 'Mrs. Monica & Mr. Ramesh Raisinghani', 'Mr. Deepak Raisinghani', 'Mrs. Rakhi & Mr. Anoop Raisinghani', 'Mr. Jayant Samtani', 'And Manwani Family']
+    closingNames: ['Mrs. Monica & Mr. Ramesh Raisinghani', 'Mr. Deepak Raisinghani', 'Mrs. Rakhi And Mr. Anoop Raisinghani', 'Mrs. Soni Samtani', 'Mrs. Harshita & Mr. Karamjeet Raisinghani', 'Mr. Jayant Samtani', 'And Manwani Family']
   },
   pritanshi: {
     label: 'Bride', first: 'Pritanshi', second: 'Harshit', family: 'Jeswani Family',
